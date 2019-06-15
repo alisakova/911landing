@@ -1,0 +1,51 @@
+.blocker {
+  z-index: 1000;
+}
+
+.modal {
+  // z-index: 1001;
+  background: $light-blue;
+  padding: rem(47 35 60);
+  width: 100%;
+  max-width: rem(472);
+  .fancybox-close-small {
+    background: $alt-font-color;
+    opacity: 0.5;
+    right: rem(20);
+    top: rem(20);
+    width: rem(15);
+    height: rem(15);
+    border-radius: 50%;
+    color: #fff;
+    @include flexbox(center, center);
+    padding: 0;
+  }
+}
+
+.modal__form {
+  padding: 0 rem(16);
+}
+
+.modal__title {
+  @include font(28, 700);
+  font-family: 'Solomon-Black', sans-serif;
+  margin-bottom: rem(45);
+  text-align: center;
+  line-height: 1.28;
+  &--max-width {
+    max-width: rem(296);
+  }
+  @media (max-width: 640px) {
+    font-size: rem(18, 14);
+    margin-bottom: rem(20, 14);
+  }
+}
+
+.modal__btn {
+  display: block;
+  width: 100%;
+}
+
+.modal__text {
+  font-size: rem(18);
+}

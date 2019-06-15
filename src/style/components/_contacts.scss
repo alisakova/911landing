@@ -1,0 +1,111 @@
+.contacts {
+  padding: rem(100 0 35);
+  margin-top: rem(-50);
+  background: url('../img/contacts_bg.png') no-repeat center/cover;
+  .container {
+    position: relative;
+  }
+  @media (max-width: 640px) {
+    margin-top: 0;
+    background: none;
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.contacts__container {
+  background: url('../img/map.png') no-repeat center/cover;
+  width: 100%;
+  height: rem(500);
+  box-shadow: 0 rem(15 25) rgba(29, 43, 58, 0.05);
+  border-radius: rem(10);
+  @include flexbox(center, flex-end);
+  margin-bottom: rem(63);
+  position: relative;
+  z-index: 2;
+  @media (max-width: 600px) {
+    background: none;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: rem(26, 14);
+  }
+}
+
+.contacts__icon {
+  width: rem(24);
+  min-width: rem(24);
+  height: rem(24);
+  margin: {
+    right: rem(17);
+    top: 2px;
+  }
+  @media (max-width: 640px) {
+    width: rem(15, 14);
+    min-width: rem(15, 14);
+    height: rem(15, 14);
+    margin-right: rem(12, 14);
+  }
+}
+
+.contacts__infos {
+  background: $light-blue;
+  position: relative;
+  padding: rem(60);
+  max-width: rem(589);
+  box-shadow: 0 rem(15 30) rgba(0, 0, 0, 0.05);
+  top: rem(64);
+  right: rem(64);
+  z-index: 3;
+  @media (max-width: 640px) {
+    position: static;
+    padding: rem(41 30 44, 14);
+  }
+}
+
+.contacts__title {
+  text-align: left;
+  margin-bottom: rem(30);
+  @media (max-width: 640px) {
+    margin-bottom: rem(29, 14);
+    text-align: center;
+  }
+}
+
+.contacts__info {
+  @include flexbox(flex-start, flex-start);
+  font-size: rem(24);
+  line-height: 1.33;
+  &:not(:last-child) {
+    margin-bottom: rem(15);
+  }
+  @media (max-width: 640px) {
+    font-size: rem(16, 14);
+    &:not(:last-child) {
+      margin-bottom: rem(26, 14);
+    }
+  }
+}
+
+.contacts__list {
+  margin-bottom: rem(32);
+  @media (max-width: 640px) {
+    margin-bottom: rem(34, 14);
+    padding: rem(0 20, 14);
+  }
+}
+
+.contacts__decor {
+  position: absolute;
+  top: rem(97);
+  left: rem(-136);
+  z-index: 1;
+  max-width: rem(319);
+  @media (max-width: 640px) {
+    max-width: rem(143, 14);
+    top: rem(-45, 14);
+    left: 0;
+    transform: rotate(45deg);
+  }
+}

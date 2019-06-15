@@ -1,0 +1,28 @@
+.btn-up {
+  width: rem(75);
+  height: rem(75);
+  border-radius: 50%;
+  background: $alt-font-color;
+  position: fixed;
+  z-index: 3;
+  right: rem(70);
+  bottom: rem(60);
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 rem(10 30) rgba(29, 43, 58, 0.2);
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &.active {
+    display: block;
+  }
+  @media (max-width: 640px) {
+    width: rem(30, 14);
+    height: rem(30, 14);
+    right: rem(20, 14);
+    bottom: rem(20, 14);
+  }
+}

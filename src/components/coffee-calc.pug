@@ -1,0 +1,18 @@
+section.coffee-calc
+  .container
+    h2.coffee-calc__title Какой объём кофе вам нужен?
+    .coffee-calc__range-block.decor-block
+      .coffee-calc__decor-img
+        img(src="img/coffee_bean.png", alt="Кофейное зерно")
+      .coffee-calc__subtitle Сколько чашек кофе в день вы продаете?
+      .coffee-calc__range.range
+        input(id='range', type="range", name="range", min="5", max="100", step="1", value="16")
+      .coffee-calc__range-info
+        .coffee-calc__amount-coffee
+          .coffee-calc__caption Объём кофе
+          .coffee-calc__value._value ~ от 8 кг
+        .coffee-calc__price
+          .coffee-calc__caption Стоимость
+          .coffee-calc__value._price по договорённости
+    .coffee-calc__subtext от 10 рублей за кружку кофе
+    button.btn оставить заявку<br />на бесплатный расчет

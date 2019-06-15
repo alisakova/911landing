@@ -1,0 +1,131 @@
+.features {
+  padding: rem(185 0 229);
+  background: url('../img/features_bg.png') no-repeat center/cover;
+  position: relative;
+  @media (max-width: 640px) {
+    padding: rem(78 0 70, 14);
+    background: none;
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: rem(260, 14);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $light-blue;
+    }
+  }
+}
+
+.features__title {
+  margin-bottom: rem(20);
+  @media (max-width: 640px) {
+    margin-bottom: rem(10, 14);
+  }
+}
+
+.features__subtitle {
+  margin-bottom: rem(47);
+  @media (max-width: 640px) {
+    font-size: 1rem;
+    margin-bottom: rem(25, 14);
+  }
+}
+
+.features__container {
+  @include flexbox(stretch, flex-start);
+  margin: rem(0 -15);
+  position: relative;
+  z-index: 3;
+  @media (max-width: 640px) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.features__col {
+  width: 33.333%;
+  padding: rem(0 15);
+  @media (max-width: 640px) {
+    width: 100%;
+    padding: 0;
+    &:not(:last-child) {
+      margin-bottom: rem(19, 14);
+    }
+    &:nth-child(2) {
+      .features__block {
+        padding-bottom: rem(69, 14);
+      }
+    }
+    &:nth-child(3) {
+      .features__block {
+        padding-bottom: rem(53, 14);
+      }
+    }
+  }
+}
+
+.features__block {
+  position: relative;
+  height: 100%;
+  padding: rem(46 36 33);
+  @media (max-width: 640px) {
+    padding: rem(38 28 26, 14);
+  }
+}
+
+.features__caption {
+  @include font(23, 700);
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: rem(25);
+  @media (max-width: 640px) {
+    font-size: rem(18, 14);
+    margin-bottom: rem(20, 14);
+  }
+}
+
+.features__text {
+  color: #000;
+  font-size: rem(17);
+  .color-rose {
+    font: {
+      family: 'Solomon-Black-SemiBold', sans-serif;
+      style: italic;
+      weight: 600;
+    }
+  }
+
+  @media (max-width: 640px) {
+    font-size: 1rem;
+  }
+}
+
+.features__subtext {
+  color: #000;
+  font-size: rem(14);
+  margin-top: rem(50);
+  max-width: rem(130);
+  @media (max-width: 640px) {
+    font-size: rem(12, 14);
+    margin-top: rem(29, 14);
+  }
+}
+
+.features__img {
+  position: absolute;
+  bottom: rem(6);
+  &--first {
+    max-width: rem(110);
+    right: rem(20);
+  }
+  &--second {
+    max-width: rem(206);
+    right: 0;
+  }
+  &--third {
+    max-width: rem(138);
+    right: rem(34);
+  }
+}

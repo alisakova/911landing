@@ -1,0 +1,27 @@
+-
+  var reasons = [
+    "Обслуживание кофемашины <br />стоит <span class='color-rose'>от 15 000 руб.</span>",
+    "Ремонт начинается<br /><span class='color-rose'>от&nbsp;50 000  руб.</span>"
+  ];
+  var reasonsList = [
+    "Обслуживание мы берем на себя",
+    "Ремонтируем за свой счет",
+    "Обновляем кофемашины на новые",
+  ];
+  
+section.reasons
+  .container
+    h2.reasons__title Почему покупать кофемашину самому НЕ выгодно 
+    .reasons__container
+      .reasons__items
+        each item, index in reasons
+          .reasons__item
+            .reasons__img
+              img(src="img/reasons/reason-" + index + ".png", alt="Причина-" + index)
+            .reasons__text!= item
+      .reasons__reason-block
+        .reasons__subtitle Решение — арендовать кофемашину у нас 
+        ul.reasons__list
+          each item in reasonsList
+            li.reasons__list-item= item
+          

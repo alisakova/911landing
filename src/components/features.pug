@@ -1,0 +1,34 @@
+-
+  var features = [
+    {
+      "title": "Пользуйтесь бесплатно",
+      "text": "Аренда кофемашины —<br /><span class='color-rose'>0 руб</span>",
+      "subtext": "при покупке от 5 кг кофе в месяц",
+      "imgAddClass": "first",
+    },
+    {
+      "title": "38 сортов кофе",
+      "text": "Поставляем только<br />лучшие сорта кофе<br /><span class='color-rose'>свежей обжарки</span>",
+      "imgAddClass": "second",
+    },
+    {
+      "title": "Быстро",
+      "text": "Техническое<br />обслуживание,<br />замена и ремонт<br /><span class='color-rose'>по звонку</span>",
+      "imgAddClass": "third",
+    },
+  ];
+
+section.features
+  .container
+    h2.features__title Платите только за кофе
+    h3.features__subtitle ЭТО ВЫГОДНО
+    .features__container
+      each item, index in features
+        .features__col
+          .features__block.decor-block.decor-block--small
+            .features__caption= item.title
+            .features__text!= item.text
+            if item.subtext
+              .features__subtext= item.subtext
+            .features__img(class = "features__img--" + item.imgAddClass)
+              img(src="img/features/feature-" + index + ".png", alt= item.title)

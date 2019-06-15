@@ -1,0 +1,25 @@
+.logo {
+  @include flexbox(center, flex-start);
+  a, svg {
+    display: block;
+  }
+  a {
+    max-width: rem(54);
+    min-width: rem(54);
+    margin-right: rem(14);
+    @media (max-width: 640px) {
+      max-width: rem(54, 14);
+      min-width: rem(54, 14);
+      margin-right: 0;
+    }
+  }
+}
+
+.logo__descr {
+  @include font(14, 400);
+  line-height: 1.4;
+  color: rgba(64, 64, 64, 0.7);
+  @media (max-width: 650px) {
+    display: none;
+  }
+}

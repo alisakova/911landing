@@ -1,0 +1,112 @@
+.reasons {
+  padding: rem(20 0 20);
+}
+
+.reasons__title {
+  max-width: rem(650);
+  margin: 0 auto rem(42);
+  @media (max-width: 640px) {
+    max-width: none;
+    margin-bottom: rem(34, 14);
+  }
+}
+
+.reasons__container {
+  @include flexbox(center, space-between);
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+.reasons__items {
+  margin-right: rem(90);
+  @media (max-width: 640px) {
+    margin: {
+      right: 0;
+      bottom: rem(42, 14);
+    }
+  }
+}
+
+.reasons__item {
+  @include flexbox(center, flex-start);
+  &:not(:last-child) {
+    margin-bottom: rem(33);
+  }
+  @media (max-width: 640px) {
+    &:not(:last-child) {
+      margin-bottom: rem(20, 14);
+    }
+  }
+}
+
+.reasons__img {
+  margin-right: rem(27);
+  min-width: rem(63);
+  max-width: rem(63);
+  @media (max-width: 640px) {
+    min-width: rem(40, 14);
+    max-width: rem(40, 14);
+    margin-right: rem(24, 14);
+  }
+}
+
+.reasons__text {
+  font-size: rem(20);
+  .color-rose {
+    font-weight: 700;
+  }
+  @media (max-width: 640px) {
+    font-size: 1rem;
+  }
+}
+
+.reasons__reason-block {
+  padding: rem(44 44 49);
+  border: 2px dashed $alt-font-color;
+  @media (max-width: 640px) {
+    padding: rem(30, 14);
+  }
+}
+
+.reasons__subtitle {
+  @include font(22, 700);
+  margin-bottom: rem(35);
+  color: #000;
+  @media (max-width: 640px) {
+    font-size: rem(16, 14);
+    margin-bottom: rem(20, 14);
+  }
+}
+
+.reasons__list-item {
+  color: #000;
+  font-size: rem(18);
+  padding-left: rem(26);
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: rem(20);
+  }
+  &:before {
+    content: '';
+    background: #fff;
+    border: 3px solid $rose;
+    box-shadow: 0 rem(4 4) rgba(226, 51, 77, 0.15);
+    width: rem(12);
+    height: rem(12);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  @media (max-width: 640px) {
+    font-size: 1rem;
+    padding-left: rem(17);
+    &:before {
+      width: rem(8, 14);
+      height: rem(8, 14);
+      border-width: 2px;
+    }
+  }
+}

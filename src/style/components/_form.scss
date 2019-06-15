@@ -1,0 +1,38 @@
+.form[disabled="disabled"] {
+  .form__input {
+    background: rgba(246, 247, 250, 0.9);
+    color: $gray;
+  }
+  .btn {
+    background: rgba(243, 8, 78, 0.3);
+  }
+}
+
+.form__input {
+  background: #fff;
+  border: none;
+  border-radius: rem(10);
+  box-shadow: inset 0 0 3px 1px rgba(115, 138, 168, 0.25);
+  -webkit-appearance: none;
+  padding: rem(23) rem(40);
+  font-size: rem(16);
+  line-height: 1.5;
+  color: $alt-font-color;
+  width: 100%;
+  @include input-placeholder {
+    color: $alt-gray;
+    transition: color 250ms;
+  }
+  &:focus {
+    @include input-placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.form__item {
+  margin-bottom: rem(25);
+  &:not(:last-of-type) {
+    margin-bottom: rem(15);
+  }
+}

@@ -1,0 +1,25 @@
+footer.contacts
+  .container
+    .contacts__decor
+      img(src="img/contacts_decor.png", alt="")
+    .contacts__container
+      .contacts__infos.decor-block.decor-block--alt-border
+        h2.contacts__title Контакты
+        .contacts__list
+          .contacts__info
+            .contacts__icon
+              include ../img/phone.svg
+            a(href="tel:+78126034911") +7 (812) 603-49-11
+          .contacts__info
+            .contacts__icon
+              include ../img/mail.svg
+            a(href="mailto:info@911office.ru") info@911office.ru
+          .contacts__info
+            .contacts__icon
+              include ../img/place.svg
+            span г.Санкт-Петербург,<br />наб. Обводного канала, д.74Ж, оф. 57
+        a(data-fancybox, data-options='{"src": "#request-call-modal", "touch": false}' href="javascript:;").btn Обратная связь
+    .footer
+      include ./logo
+      a(href="https://911office.ru/privacy-policy").footer__link Политика конфиденциальности
+      

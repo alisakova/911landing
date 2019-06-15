@@ -1,0 +1,10 @@
+.reviews {
+  padding: rem(40 0 50);
+}
+
+.reviews__title {
+  margin-bottom: rem(59);
+  @media (max-width: 640px) {
+    margin-bottom: rem(24, 14);
+  }
+}

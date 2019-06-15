@@ -1,0 +1,201 @@
+@import 'variables';
+@import 'util';
+@import 'mixins';
+@import 'slick';
+@import 'fonts';
+@import 'jquery.fancybox.css';
+@import 'ion.rangeSlider.css';
+
+html {
+	height: 100%;
+	font: 400 #{16 / 1920 * 100 + vw}/#{1.5} $main-font;
+}
+
+body,
+html {
+	height: 100%;
+	min-height: 100%;
+	background: #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	display: block;
+	overflow-x: hidden;
+	min-height: 100%;
+	min-width: 375px;
+	margin: 0;
+	font: inherit;
+	font-size: 100%;
+	color: $main-font-color;
+	background: #fff;
+	-webkit-text-size-adjust: none;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+	outline: none;
+}
+
+main {
+	position: relative;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: all 250ms;
+}
+
+button {
+	border: none;
+	padding: 0;
+	font-family: 'Solomon-Black', sans-serif;
+	color: inherit;
+	cursor: pointer;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.container {
+	max-width: rem(1185);
+	padding: 0 rem(20);
+	margin: 0 auto;
+}
+
+h1 {
+	color: $alt-font-color;
+	font-family: 'Solomon-Black', sans-serif;
+	@include font(45, 600);
+	margin: 0 0 rem(12);
+	line-height: 1.22;
+	letter-spacing: 0.6px;
+	max-width: rem(600);
+}
+
+h2 {
+	color: $alt-font-color;
+	font-family: 'Solomon-Black', sans-serif;
+	@include font(42, 700);
+	line-height: 1.3;
+	margin: 0;
+	text-align: center;
+}
+
+h3 {
+	color: rgba(29, 43, 58, 0.7);
+	font-family: 'Solomon-Black', sans-serif;
+	@include font(18, 700);
+	line-height: 1.44;
+	margin: 0;
+	text-align: center;
+}
+
+p {
+	font-size: $main-fz;
+	line-height: 1.5;
+	text-align: left;
+	margin: 0;
+	color: $main-font-color;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.section-name {
+	font-size: rem(18);
+	line-height: 1.44;
+	color: $alt-font-color;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.8px;
+	text-align: center;
+	display: block;
+}
+
+.color-rose {
+	color: $rose;
+}
+
+.color-rose-2 {
+	color: $rose-2;
+}
+
+.color-rose-3 {
+	color: $rose-3;
+}
+
+.color-blue {
+	color: $blue;
+}
+
+.common-bg {
+	background: url('../img/common_bg.png') no-repeat center/cover;
+}
+
+.font-size-14 {
+	font-size: rem(14);
+}
+
+@media (max-width: 640px) {
+	html {
+		font-size: 14px;
+	}
+	h1 {
+		font-size: rem(25, 14);
+		max-width: rem(320, 14);
+		margin-bottom: rem(73, 14);
+		line-height: 1.28;
+	}
+	h2 {
+		font-size: rem(22, 14);
+	}
+}
+//
+// @media (max-width: 1100px) {
+// 	html {
+// 		font-size: 10px;
+// 	}
+// }
+//
+// @media (max-width: 540px) {
+// 	h1 {
+// 		font-size: rem(40);
+// 	}
+// 	h2 {
+// 		margin-bottom: rem(40);
+// 	}
+// }
+
+@import "components/header";
+@import "components/intro";
+@import "components/btn";
+@import "components/coffee-calc";
+@import "components/decor-block";
+@import "components/range";
+@import "components/features";
+@import "components/procedure";
+@import "components/reasons";
+@import "components/contacts";
+@import "components/logo";
+@import "components/footer";
+@import "components/video";
+@import "components/reviews";
+@import "components/reviews-slider";
+@import "components/btn-up";
+@import "components/modal";
+@import "components/form";
+@import "components/coffee-slider";
+@import "components/request";

@@ -1,0 +1,39 @@
+.header {
+  padding-bottom: rem(80);
+  .container {
+    @include flexbox(center, space-between);
+  }
+  @media (max-width: 640px) {
+    padding-bottom: rem(38, 14);
+  }
+}
+
+.header__right-col {
+  text-align: right;
+  @include flexbox(flex-end, flex-end, column);
+  a {
+    line-height: 1;
+  }
+}
+
+.header__tel {
+  @include font(20, 700);
+  margin-bottom: rem(10);
+  color: $alt-font-color;
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
+}
+
+.header__mail {
+  text-transform: uppercase;
+  @include font(14, 700);
+  color: $rose-2;
+  border-bottom: 1px solid $rose-2;
+  &:hover, &:active, &:focus {
+    border-bottom-color: transparent;
+  }
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}

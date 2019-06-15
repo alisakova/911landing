@@ -1,0 +1,19 @@
+.footer {
+  @include flexbox(flex-end, space-between);
+  @media (max-width: 640px) {
+    justify-content: center;
+    .logo {
+      display: none;
+    }
+  }
+}
+
+.footer__link {
+  font-size: rem(14);
+  color: rgba(64, 64, 64, 0.7);
+  border-bottom: 1px solid rgba(64, 64, 64, 0.7);
+  line-height: 1;
+  @media (max-width: 640px) {
+    font-size: 1rem;
+  }
+}

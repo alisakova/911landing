@@ -1,0 +1,48 @@
+-
+  var coffeeMachines = [
+    {
+      "addClass": "coffee-slider__slide coffee-slider__slide--first",
+      "title": "Кофемашина<br /><span class='color-rose'>Saeco Lirika</span>",
+      "imgAddClass": "coffee-slider__img coffee-slider__img--first",
+      "img": "saeco-lirika",
+      "alt": "Кофемашина Saeco Lirika",
+      "list": [
+        "Запуск одним нажатием",
+        "Быстрая очистка",
+        "Объем 2.5 литра",
+        "Компактный размер"
+      ]
+    },
+    {
+      "addClass": "coffee-slider__slide coffee-slider__slide--second",
+      "title": "Кофемолка<br /><span class='color-rose'>Fiorenzato F 64 E</span>",
+      "imgAddClass": "coffee-slider__img coffee-slider__img--second",
+      "img": "fiorenzato-f-64-e",
+      "alt": "Кофемолка Fiorenzato F 64 E",
+      "text": "Электронная кофемолка Fiorenzato F64E используется в кофейнях, барах, ресторанах, офисах и&nbsp;предназначена для равномерного помола и дозировки порций молотого кофе. "
+    },
+    {
+      "addClass": "coffee-slider__slide coffee-slider__slide--third",
+      "title": "Кофемолка<br /><span class='color-rose'>Nuova Simonelli MDX on Deamand</span>",
+      "imgAddClass": "coffee-slider__img coffee-slider__img--third",
+      "img": "nuova-simonelli-mdx-on-deamand",
+      "alt": "Кофемолка Nuova Simonelli MDX on Deamand",
+      "text": "Используется на предприятиях общественного питания, в&nbsp;офисах и&nbsp;частных домах для получения молотого кофе из зерен. Модель оснащена микрометрической регулировкой помола. Жернова выполнены из нержавеющей стали, корпус - из литого алюминия с эпоксидным покрытием."
+    }
+  ]
+
+section.coffee
+  .coffee-slider
+    each item in coffeeMachines
+      div.decor-block(class= item.addClass)
+        .coffee-slider__title!= item.title
+        if item.list 
+          ul.coffee-slider__list
+            each listItem in item.list
+              li.coffee-slider__item-list= listItem
+        else 
+          p.coffee-slider__text!= item.text
+        a(data-fancybox, data-options='{"src": "#presentation-modal", "touch": false}' href="javascript:;").btn Подробнее
+        div(class= item.imgAddClass)
+          img(src="img/coffee/" + item.img + ".png", alt= item.alt)
+    
