@@ -105,7 +105,6 @@
 .intro__red-label-price {
   font-family: 'Solomon-Black', sans-serif;
   @include font(30, 600);
-  letter-spacing: -1.5px;
   @media (max-width: 640px) {
     font-size: rem(20, 14);
   }

@@ -39,7 +39,7 @@ $(document).ready(function() {
     infinite: true,
     arrows: false,
     autoplay: true,
-    speed: 500,
+    speed: 700,
     centerPadding: '440px',
     centerMode: true,
     responsive: [
@@ -76,6 +76,28 @@ $(window).resize(function() {
   $(".reviews-slider").slick("resize");
   $(".coffee-slider").slick("resize");
 });
+
+$('.coffee-slider__slide').click(function(e) {
+  var clickedSlide = $(this);
+  changeSlide(clickedSlide);
+});
+
+$('.reviews-slider__slide').click(function(e) {
+  var clickedSlide = $(this);
+  changeSlide(clickedSlide);
+});
+
+var changeSlide = function(clickedSlide) {
+  var slider = clickedSlide.closest('.slick-slider');
+  var currentSlide = slider.find('.slick-current');
+  var currentSlideIndex = currentSlide.data('slick-index');
+  var clickedSlideIndex = clickedSlide.data('slick-index');
+  if (clickedSlideIndex < currentSlideIndex) {
+    slider.slick('slickPrev');
+  } else {
+    slider.slick('slickNext');
+  }
+};
 
 var toTopBtn = document.querySelector(".btn-up");
 var scrollAnimation;

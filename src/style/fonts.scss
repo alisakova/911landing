@@ -1,13 +1,15 @@
 @font-face {
     font-family: 'Solomon';
     font-weight: normal;
-    src: url('../fonts/Solomon-Sans-Normal.otf') format('otf');
+    src: url('../fonts/Solomon-Sans-Normal.otf') format('otf')
+         url('../fonts/Solomon-Sans-Normal.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Solomon-Black';
-    font-weight: 400;
-    src: url('../fonts/Solomon-Sans-Black.otf') format('otf');
+    font-weight: 700;
+    src: url('../fonts/Solomon-Sans-Black.otf') format('otf'),
+         url('../fonts/Solomon-Sans-Black.ttf') format('truetype');
 }
 
 @font-face {

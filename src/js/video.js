@@ -4,7 +4,9 @@ $(document).on("click", ".video__btn", function(e) {
   var poster = $(this);
   // ищем родителя ближайшего по классу
   var wrapper = poster.closest(".video__container");
-  videoPlay(wrapper);
+  if (!wrapper.hasClass('active')) {
+    videoPlay(wrapper);
+  }
 });
 
 //вопроизводим видео, при этом скрывая постер

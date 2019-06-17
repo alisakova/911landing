@@ -32,6 +32,7 @@ var path = {
     js: "src/js/*.js",
     style: "src/style/main.scss",
     img: ["src/img/*.*", "src/img/**/*.*"],
+    fonts: "src/fonts/*",
   },
   watch: {
     //За чем наблюдать
@@ -116,6 +117,11 @@ gulp.task("image:build", function() {
     .pipe(reload({ stream: true }));
 });
 
+gulp.task("fonts:build", function() {
+  gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
+});
+
+
 //следить за изменениями
 gulp.task("watch", function() {
   watch([path.watch.html], function(event, cb) {
@@ -138,6 +144,7 @@ gulp.task("build", [
   "js:build",
   "style:build",
   "image:build",
+  "fonts:build",
 ]);
 
 gulp.task("webserver", function() {
