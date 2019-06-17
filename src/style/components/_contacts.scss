@@ -5,6 +5,10 @@
   .container {
     position: relative;
   }
+  .btn {
+    position: relative;
+    z-index: 6;
+  }
   @media (max-width: 640px) {
     margin-top: 0;
     background: none;

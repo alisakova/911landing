@@ -1,9 +1,10 @@
 .coffee-calc {
   padding-top: rem(100);
   background: url('../img/amount_bg.png') no-repeat center/cover;
-  @include flexbox(center, center, column);
+  .container {
+    @include flexbox(center, center, column);
+  }
   .btn {
-    display: block;
     margin: 0 auto;
   }
   @media (max-width: 640px) {

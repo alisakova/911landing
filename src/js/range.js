@@ -8,7 +8,7 @@ $("#range").ionRangeSlider({
     var value = data.from;
     if (value >= 10) {
       $value[0].textContent = "~ 5 кг в месяц";
-      $price[0].textContent = "7800 руб.";
+      $price[0].textContent = "6500 руб.";
     }
     if (value >= 16) {
       $value[0].textContent = "~ от 8 кг";
@@ -16,7 +16,7 @@ $("#range").ionRangeSlider({
     }
     if (value < 10) {
       $value[0].textContent = "~ 3 кг в месяц";
-      $price[0].textContent = "6000 руб.";
+      $price[0].textContent = "5000 руб.";
     }
   }
 });

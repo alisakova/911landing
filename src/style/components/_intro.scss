@@ -5,7 +5,7 @@
     position: relative;
   }
   @media (max-width: 640px) {
-    padding: rem(15 0 200, 14);
+    padding: rem(15 0 90, 14);
   }
 }
 
@@ -118,6 +118,8 @@
     @include font(22, 700);
   }
   @media (max-width: 640px) {
+    max-width: rem(160, 14);
+    line-height: 1.2;
     font-size: rem(14, 14);
     span {
       font-size: rem(18, 14);

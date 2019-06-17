@@ -1,8 +1,8 @@
 div(id="request-modal", style="display: none;").modal.decor-block
   .modal__title.modal__title--max-width Оставить заявку на бесплатный расчет
-  form(id="request_form").modal__form.form
+  form(id="request_form", data-name="Заявка на бесплатный расчет").modal__form.form
     .form__item
-      input(type="text", placeholder="Ваше имя", required).form__input
+      input(type="text", placeholder="Ваше имя", id="name", required).form__input
     .form__item
-      input(type="tel", placeholder="Номер телефона", required).form__input
+      input(type="tel", placeholder="Номер телефона", id="tel", required).form__input
     button(type="submit").modal__btn.btn Отправить
