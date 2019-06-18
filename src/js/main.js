@@ -31,6 +31,7 @@ $(document).ready(function() {
           autoplay: false,
           centerMode: false,
           adaptiveHeight: true,
+          dots: true,
         }
       }
     ]
@@ -66,6 +67,8 @@ $(document).ready(function() {
         settings: {
           autoplay: false,
           centerMode: false,
+          adaptiveHeight: true,
+          dots: true,
         }
       }
     ]

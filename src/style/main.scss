@@ -149,6 +149,33 @@ img {
 	font-size: rem(14);
 }
 
+.slick-dots {
+	@include flexbox(center, center);
+	position: absolute;
+	bottom: rem(5, 14);
+	left: 50%;
+	transform: translateX(-50%);
+	li {
+		margin: 0 rem(4);
+		button {
+			width: rem(8, 14);
+			height: rem(8, 14);
+			font-size: 0;
+			background: none;
+			border: 1px solid #5091f1;
+			border-radius: 50%;
+			transition: all 250ms;
+		}
+		&.slick-active {
+			button {
+				width: rem(10, 14);
+				height: rem(10, 14);
+				background: #5091f1;
+			}
+		}
+	}
+}
+
 @media (max-width: 640px) {
 	html {
 		font-size: 14px;

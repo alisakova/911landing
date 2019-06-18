@@ -23,17 +23,19 @@
       }
     }
     @media (max-width: 640px) {
-      margin: 0 rem(20, 14);
+      margin: rem(0 20 30, 14);
       padding: rem(54 30 221, 14);
       box-shadow: 0 rem(15 25) rgba(138, 169, 210, 0.25);
     }
   }
   .slick-track {
     margin: 0;
+    padding-bottom: rem(30);
     display: flex;
     align-items: center;
     @media (max-width: 640px) {
       display: block;
+      padding-bottom: 0;
     }
   }
   .btn {

@@ -14,6 +14,9 @@
     &.slick-current.slick-active {
       opacity: 1;
     }
+    @media (max-width: 640px) {
+      margin: 0 rem(17 30, 14);
+    }
   }
   .slick-track {
     margin: 0;
