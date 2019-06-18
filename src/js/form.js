@@ -19,7 +19,7 @@ $("body").ready(function() {
 $(document).on("submit", "#request_form, #presentation_form, #tasting_form, #call_form", function(event) {
   $.ajax({
     type: "POST",
-    url: "https://911office.ru/request",
+    url: "/request",
     data: {
       formName: $(this).data('name'),
       name: $("#name").val(),
