@@ -8,8 +8,8 @@
     opacity: 0.5;
     right: rem(20);
     top: rem(20);
-    width: 15px;
-    height: 15px;
+    width: rem(15);
+    height: rem(15);
     border-radius: 50%;
     color: #fff;
     @include flexbox(center, center);

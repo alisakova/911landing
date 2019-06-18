@@ -17,13 +17,15 @@ $("body").ready(function() {
 });
 
 $(document).on("submit", "#request_form, #presentation_form, #tasting_form, #call_form", function(event) {
+  var name = $(this).find('._name').val();
+  var tel = $(this).find('._tel').val();
   $.ajax({
     type: "POST",
     url: "/request",
     data: {
-      formName: $(this).data('name'),
-      name: $("#name").val(),
-      phone: $("#tel").val(),
+      question: $(this).data('name'),
+      name: name,
+      phone: tel,
       utm_source: getParameterByName("utm_source"),
       utm_term: getParameterByName("utm_term")
     },

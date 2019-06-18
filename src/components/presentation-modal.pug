@@ -2,7 +2,7 @@ div(id="presentation-modal", style="display: none;").modal.decor-block
   .modal__title Записаться на презентацию оборудования
   form(id="presentation_form", data-name="Презентация оборудования").modal__form.form
     .form__item
-      input(type="text", placeholder="Ваше имя", required).form__input
+      input(type="text", placeholder="Ваше имя", value, required).form__input._name
     .form__item
-      input(type="tel", placeholder="Номер телефона", required).form__input
+      input(type="tel", placeholder="Номер телефона", value, required).form__input._tel
     button(type="submit").modal__btn.btn Записаться
