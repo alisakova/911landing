@@ -67,7 +67,7 @@ section.reviews
       .reviews-slider__slide.decor-block
         if review.logo
           .reviews-slider__logo
-            img(src="img/reviews/" + review.logo, alt= review.author)
+            img(src="/img/reviews/" + review.logo, alt= review.author)
         .reviews-slider__descr
           .reviews-slider__company-name= review.author
           p.reviews-slider__text!= review.text
