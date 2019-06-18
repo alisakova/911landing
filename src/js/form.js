@@ -9,7 +9,7 @@ function getParameterByName(name, url) {
 }
 
 $("body").ready(function() {
-  $("#request_form input[type='tel']").bind("change keyup input click", function() {
+  $("input[type='tel']").bind("change keyup input click", function() {
     if (this.value.match(/[^0-9+]/g)) {
       this.value = this.value.replace(/[^0-9+]/g, "");
     }
@@ -19,7 +19,7 @@ $("body").ready(function() {
 $(document).on("submit", "#request_form, #presentation_form, #tasting_form, #call_form", function(event) {
   $.ajax({
     type: "POST",
-    url: "/request",
+    url: "https://911office.ru/request",
     data: {
       formName: $(this).data('name'),
       name: $("#name").val(),
