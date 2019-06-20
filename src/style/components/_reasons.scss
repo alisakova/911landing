@@ -93,12 +93,21 @@
     border: 3px solid $rose;
     box-shadow: 0 rem(4 4) rgba(226, 51, 77, 0.15);
     width: rem(12);
+    min-width: rem(12);
     height: rem(12);
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     border-radius: 50%;
+  }
+  @media (max-width: 1440px) {
+    &:before {
+      min-width: 5px;
+      width: 5px;
+      height: 5px;
+      border-width: 1px;
+    }
   }
   @media (max-width: 640px) {
     font-size: 1rem;

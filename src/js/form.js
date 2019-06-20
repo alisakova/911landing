@@ -36,7 +36,6 @@ $(document).on("submit", "#request_form, #presentation_form, #tasting_form, #cal
       $(this).attr("disabled", "disabled");
     },
     success: function(data) {
-      console.log(data);
       $(this).removeAttr("disabled");
       $('input').val();
       var instance = $.fancybox.getInstance();

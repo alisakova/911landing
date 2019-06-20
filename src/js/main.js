@@ -45,6 +45,12 @@ $(document).ready(function() {
     centerMode: true,
     responsive: [
       {
+        breakpoint: 1800,
+        settings: {
+          centerPadding: "350px"
+        }
+      },
+      {
         breakpoint: 1500,
         settings: {
           centerPadding: "250px"

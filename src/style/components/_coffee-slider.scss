@@ -107,22 +107,58 @@
     background: #fff;
     border: 1px solid $rose;
     box-shadow: 0 rem(3 5) rgba(226, 51, 77, 0.25);
-    width: rem(7);
     min-width: rem(7);
-    height: rem(7);
     min-height: rem(7);
-    width: 7px;
-    height: 7px;
+    width: rem(7);
+    height: rem(7);
     position: absolute;
-    top: 50%;
+    // top: 50%;
+    top: rem(8);
     left: 0;
-    transform: translateY(-50%);
+    transform: translateZ(0);
+    // transform: translateY(-50%);
     border-radius: 50%;
+  }
+  @media (max-width: 1440px) {
+    &:before {
+      min-width: 7px;
+      width: 7px;
+      min-height: 7px;
+      height: 7px;
+      top: 6px;
+    }
+  }
+  @media (max-width: 1280px) {
+    &:before {
+      top: 5px;
+    }
+  }
+  @media (max-width: 1080px) {
+    &:before {
+      min-width: 4px;
+      width: 4px;
+      min-height: 4px;
+      height: 4px;
+      top: 4px;
+    }
+  }
+  @media (max-width: 920px) {
+    &:before {
+      top: 3px;
+    }
   }
   @media (max-width: 640px) {
     font-size: 1rem;
     &:not(:last-child) {
       margin-bottom: 2px;
+    }
+    &:before {
+      min-width: 6px;
+      width: 6px;
+      min-height: 6px;
+      height: 6px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

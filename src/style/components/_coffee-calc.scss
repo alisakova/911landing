@@ -45,17 +45,6 @@
   }
 }
 
-.coffee-calc__subtitle {
-  @include font(30, 700);
-  margin-bottom: rem(81);
-  color: $rose;
-  @media (max-width: 640px) {
-    margin-bottom: rem(32, 14);
-    font-size: rem(18, 14);
-    text-align: center;
-  }
-}
-
 .coffee-calc__range {
   margin-bottom: rem(60);
   @media (max-width: 640px) {
